@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人作品集 | 大學專案紀錄</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 Google 字型提升質感 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 頂部導覽列 -->
+    <header class="navbar">
+        <div class="logo">YOUR NAME.</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">關於我</a></li>
+                <li><a href="#projects">專案作品</a></li>
+                <li><a href="#contact">聯絡方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 個人品牌 Hero 區塊 -->
+    <section id="about" class="hero">
+        <div class="hero-content">
+            <h1>你好，我是 <span class="highlight">[你的名字]</span></h1>
+            <p class="subtitle">大學四年專案作品集 | [你的專業/領域，如：全端開發 / 視覺設計]</p>
+            <p class="bio">這裡紀錄了我大一至大四的學習軌跡與專案成果。點擊下方專案卡片可查看詳細說明與程式碼。</p>
+            <a href="#projects" class="btn">瀏覽專案</a>
+        </div>
+    </section>
+
+    <!-- 專案展示區塊 -->
+    <section id="projects" class="projects-section">
+        <h2>專案作品集</h2>
+        
+        <!-- 年級篩選按鈕 -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">全部作品</button>
+            <button class="filter-btn" data-filter="freshman">大一</button>
+            <button class="filter-btn" data-filter="sophomore">大二</button>
+            <button class="filter-btn" data-filter="junior">大三</button>
+            <button class="filter-btn" data-filter="senior">大四 (畢業專題)</button>
+        </div>
+
+        <!-- 專案網格容器 -->
+        <div class="projects-grid" id="projects-grid">
+            <!-- JavaScript 會自動將動態資料渲染至此 -->
+        </div>
+    </section>
+
+    <!-- 專案詳情彈窗 (Modal) -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-title">專案名稱</h3>
+            <p id="modal-tag" class="tag"></p>
+            <div id="modal-body">
+                <!-- 專案詳細介紹 -->
+            </div>
+            <div class="modal-links">
+                <a id="modal-github" href="#" target="_blank" class="btn-outline">GitHub 程式碼</a>
+                <a id="modal-demo" href="#" target="_blank" class="btn">線上展示 / Demo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 聯絡方式區塊 -->
+    <section id="contact" class="contact-section">
+        <h2>聯絡我</h2>
+        <p>歡迎透過以下方式與我聯繫或交流：</p>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com">Email</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 [你的名字]. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
