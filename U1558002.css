@@ -1,0 +1,95 @@
+/* ==========================================
+   全局設定
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Microsoft JhengHei", "PingFang TC", Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================
+   圖片容器與佈局 (Flexbox)
+   ========================================== */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 圖片卡片超連結容器 */
+.img-card {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.img-card img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.img-card .img-title {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* ==========================================
+   滑鼠懸停 (Hover) 晃動動畫效果
+   ========================================== */
+
+/* 懸停時套用抖動動畫 */
+.img-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* 觸發 keyframesShake 動畫，持續 0.5 秒，重複運作 */
+    animation: keyframesShake 0.5s ease-in-out infinite;
+}
+
+/* 定義晃動 Keyframes 幀率動畫 */
+@keyframes keyframesShake {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-5deg); }
+    40% { transform: rotate(5deg); }
+    60% { transform: rotate(-3deg); }
+    80% { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* ==========================================
+   頁尾
+   ========================================== */
+footer {
+    margin-top: 3rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
