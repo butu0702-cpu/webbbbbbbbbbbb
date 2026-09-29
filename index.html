@@ -3,85 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>個人作品集 | 大學專案紀錄</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- 引入 Google 字型提升質感 -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>DormLife | 大學生宿舍生活最佳解決方案</title>
+    <!-- 引入外部 CSS -->
+    <link rel="stylesheet" href="123.css">
 </head>
 <body>
 
-    <!-- 頂部導覽列 -->
+    <!-- 頁首導覽列 -->
     <header class="navbar">
-        <div class="logo">YOUR NAME.</div>
+        <div class="logo">DormLife<span>.</span></div>
         <nav>
-            <ul class="nav-links">
-                <li><a href="#about">關於我</a></li>
-                <li><a href="#projects">專案作品</a></li>
-                <li><a href="#contact">聯絡方式</a></li>
+            <ul>
+                <li><a href="#simulator">尺寸模擬器</a></li>
+                <li><a href="#bundles">一鍵打包風格組</a></li>
+                <li><a href="#products">友好標籤嚴選</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 個人品牌 Hero 區塊 -->
-    <section id="about" class="hero">
+    <!-- 主頁面 Hero Section -->
+    <section class="hero">
         <div class="hero-content">
-            <h1>你好，我是 <span class="highlight">[你的名字]</span></h1>
-            <p class="subtitle">大學四年專案作品集 | [你的專業/領域，如：全端開發 / 視覺設計]</p>
-            <p class="bio">這裡紀錄了我大一至大四的學習軌跡與專案成果。點擊下方專案卡片可查看詳細說明與程式碼。</p>
-            <a href="#projects" class="btn">瀏覽專案</a>
+            <span class="badge">專為大學生打造</span>
+            <h1>告別宿舍踩雷！<br>給你真正放得下的理想空間</h1>
+            <p>拒絕冰冷尺寸數據、零色差自然光實拍、免工具快速拆裝，打造專屬你的宿舍風格。</p>
+            <a href="#bundles" class="btn btn-primary">探索一鍵打包套組</a>
         </div>
     </section>
 
-    <!-- 專案展示區塊 -->
-    <section id="projects" class="projects-section">
-        <h2>專案作品集</h2>
-        
-        <!-- 年級篩選按鈕 -->
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">全部作品</button>
-            <button class="filter-btn" data-filter="freshman">大一</button>
-            <button class="filter-btn" data-filter="sophomore">大二</button>
-            <button class="filter-btn" data-filter="junior">大三</button>
-            <button class="filter-btn" data-filter="senior">大四 (畢業專題)</button>
+    <!-- 痛點一：宿舍空間互動模擬器 -->
+    <section id="simulator" class="section container">
+        <div class="section-title">
+            <h2>01 / 解決「不知道放不放得下」</h2>
+            <p>輸入你的書桌/桌面寬度，自動算出最完美的收納佈局！</p>
         </div>
 
-        <!-- 專案網格容器 -->
-        <div class="projects-grid" id="projects-grid">
-            <!-- JavaScript 會自動將動態資料渲染至此 -->
-        </div>
-    </section>
-
-    <!-- 專案詳情彈窗 (Modal) -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3 id="modal-title">專案名稱</h3>
-            <p id="modal-tag" class="tag"></p>
-            <div id="modal-body">
-                <!-- 專案詳細介紹 -->
+        <div class="simulator-box">
+            <div class="sim-controls">
+                <label for="deskWidth">你的桌面寬度 (cm)：</label>
+                <input type="number" id="deskWidth" value="100" min="60" max="180">
+                <button onclick="calculateFit()" class="btn btn-small">開始模擬評估</button>
             </div>
-            <div class="modal-links">
-                <a id="modal-github" href="#" target="_blank" class="btn-outline">GitHub 程式碼</a>
-                <a id="modal-demo" href="#" target="_blank" class="btn">線上展示 / Demo</a>
+
+            <div id="simResult" class="sim-result">
+                <!-- JS 動態產生模擬結果 -->
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- 聯絡方式區塊 -->
-    <section id="contact" class="contact-section">
-        <h2>聯絡我</h2>
-        <p>歡迎透過以下方式與我聯繫或交流：</p>
-        <div class="contact-links">
-            <a href="mailto:your.email@example.com">Email</a>
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    <!-- 痛點二：色差滅火與風格一鍵打包 -->
+    <section id="bundles" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>02 / 解決「色差與風格混亂」</h2>
+                <p>無濾鏡零色差自然光實拍 ✕ Dorm Bundle 一鍵打包帶走</p>
+            </div>
+
+            <div class="bundle-grid">
+                <!-- 套組 1 -->
+                <div class="bundle-card">
+                    <div class="img-wrapper">
+                        <img src="images/bundle-cream.jpg" alt="奶油燕麥風套組" onerror="this.src='https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&auto=format&fit=crop'">
+                        <span class="tag-style">奶油燕麥風</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>溫柔奶油小宅套裝</h3>
+                        <p class="real-light-note">☀️ 100% 窗邊自然光無濾鏡實拍</p>
+                        <ul class="bundle-includes">
+                            <li>可折疊床上桌 (奶茶色)</li>
+                            <li>護眼三段式磁吸小夜燈</li>
+                            <li>軟質馬卡龍收納籃 x2</li>
+                        </ul>
+                        <div class="card-footer">
+                            <span class="price">NT$ 1,280</span>
+                            <a href="https://shopee.tw" target="_blank" rel="noopener noreferrer" class="btn btn-outline">查看細節 & 購買</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 套組 2 -->
+                <div class="bundle-card">
+                    <div class="img-wrapper">
+                        <img src="images/bundle-minimal.jpg" alt="極簡冷淡風套組" onerror="this.src='https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&auto=format&fit=crop'">
+                        <span class="tag-style">極簡冷淡風</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>工業黑白極簡套裝</h3>
+                        <p class="real-light-note">☀️ 100% 窗邊自然光無濾鏡實拍</p>
+                        <ul class="bundle-includes">
+                            <li>鋼木組合桌上層架</li>
+                            <li>霧面黑大容量筆筒</li>
+                            <li>極簡折疊整理箱</li>
+                        </ul>
+                        <div class="card-footer">
+                            <span class="price">NT$ 1,450</span>
+                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">查看細節 & 購買</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 套組 3 -->
+                <div class="bundle-card">
+                    <div class="img-wrapper">
+                        <img src="images/bundle-wood.jpg" alt="溫暖木質風套组" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&auto=format&fit=crop'">
+                        <span class="tag-style">溫暖木質風</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>日系原木質感套裝</h3>
+                        <p class="real-light-note">☀️ 100% 窗邊自然光無濾鏡實拍</p>
+                        <ul class="bundle-includes">
+                            <li>原木色雙層桌上置物架</li>
+                            <li>棉麻編織雜物收納盒</li>
+                            <li>暖光復古床頭小夜燈</li>
+                        </ul>
+                        <div class="card-footer">
+                            <span class="price">NT$ 1,680</span>
+                            <a href="https://www.ikea.com.tw" target="_blank" rel="noopener noreferrer" class="btn btn-outline">查看細節 & 購買</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- 痛點三：無工具組裝與避坑標籤 -->
+    <section id="products" class="section container">
+        <div class="section-title">
+            <h2>03 / 解決「無工具組裝與搬運避坑」</h2>
+            <p>一眼看懂這件商品對宿舍生活友不友善！不用再翻幾百條評價。</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- 單品 1 -->
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="images/prod-desk.jpg" alt="免工具折疊桌" onerror="this.src='https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=500&auto=format&fit=crop'">
+                    <div class="friendly-tags">
+                        <span class="tag green">⚡ 免工具 3 秒展開</span>
+                        <span class="tag blue">📦 扁平折疊好搬運</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>多功能賽道級折疊床上桌</h3>
+                    <div class="dorm-fit-info">
+                        <strong>📍 宿舍實境示範：</strong>
+                        <p>可完美放入台大/清大/成大宿舍單人床頭，同時放得下 13 吋 Mac + 飲料杯而不擋到插座！</p>
+                    </div>
+                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-block">點擊前往購買頁</a>
+                </div>
+            </div>
+
+            <!-- 單品 2 -->
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="images/prod-light.jpg" alt="無痕磁吸燈" onerror="this.src='https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&auto=format&fit=crop'">
+                    <div class="friendly-tags">
+                        <span class="tag orange">🏷️ 免鑽孔無痕掛勾</span>
+                        <span class="tag green">🪶 超輕量 200g</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>磁吸式長條護眼宿舍檯燈</h3>
+                    <div class="dorm-fit-info">
+                        <strong>📍 宿舍實境示範：</strong>
+                        <p>附贈無痕背膠磁吸底座，畢業退宿一撕即掉不傷牆面與床架漆面。</p>
+                    </div>
+                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-block">點擊前往購買頁</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
     <footer>
-        <p>&copy; 2026 [你的名字]. All Rights Reserved.</p>
+        <p>&copy; 2026 DormLife 宿舍生活解決方案. 保留所有權利。</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- 簡單的互動模擬器 JS 邏輯 -->
+    <script>
+        function calculateFit() {
+            const width = parseFloat(document.getElementById('deskWidth').value);
+            const resultDiv = document.getElementById('simResult');
+            
+            if (isNaN(width) || width <= 0) {
+                resultDiv.innerHTML = '<p style="color: red;">請輸入有效的桌面寬度數字！</p>';
+                return;
+            }
+
+            let html = `<h4>📐 桌面寬度 ${width} cm 模擬分析結果：</h4><ul>`;
+            
+            if (width < 80) {
+                html += `<li>⚠️ <strong>空間偏緊湊：</strong> 建議選用「懸掛式收納」與「折疊床上桌」，可放 1 台筆電 + 1 個小筆記本。</li>`;
+                html += `<li>包裝容量：可放得下 1 箱標準宿舍整理盒。</li>`;
+            } else if (width >= 80 && width <= 110) {
+                html += `<li>✅ <strong>標準宿舍尺寸：</strong> 可完美放入「Dorm Bundle 一鍵打包套組」。</li>`;
+                html += `<li>情境比擬：同時擺放 13 吋 Mac + 微熱山丘禮盒 + 2 杯手搖飲後，右側仍有空位充手機。</li>`;
+            } else {
+                html += `<li>🎉 <strong>寬敞大桌面：</strong> 空間充裕！可放置雙層桌上置物架 + 螢幕架 + 2 箱大號收納盒。</li>`;
+            }
+            
+            html += `</ul>`;
+            resultDiv.innerHTML = html;
+        }
+
+        // 初始化執行一次
+        calculateFit();
+    </script>
 </body>
 </html>
