@@ -1,0 +1,808 @@
+/* ==========================================================================
+   墨韻東方 MO YUN - 新中式珠寶飾品官方網站樣式表
+   ========================================================================== */
+
+:root {
+    --bg-primary: #F9F8F6;      /* 宣紙米白 */
+    --bg-card: #FFFFFF;         /* 純白卡片 */
+    --text-primary: #1C1D1F;    /* 玄武黑 */
+    --text-secondary: #666461;  /* 煙灰 */
+    --accent-gold: #C5A059;     /* 古銅金 */
+    --accent-gold-hover: #A8833E;
+    --accent-red: #8B2626;      /* 朱砂紅 */
+    --border-color: #E8E5DF;    /* 淺灰邊框 */
+    --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
+    --transition-base: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --font-serif: "Noto Serif TC", "Songti TC", Georgia, serif;
+    --font-sans: "Noto Sans TC", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-serif);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-base);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Navbar 導覽列 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(249, 248, 246, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-mark {
+    width: 38px;
+    height: 38px;
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo-text span {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    display: block;
+    margin-top: -3px;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0.3rem 0;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text-primary);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-gold);
+    transition: var(--transition-base);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.icon-btn {
+    position: relative;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    padding: 0.5rem;
+    transition: var(--transition-base);
+}
+
+.icon-btn:hover {
+    color: var(--accent-gold);
+}
+
+.cart-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--accent-red);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero 主視覺區 */
+.hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    background: #1C1D1F;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.15) 0%, rgba(28, 29, 31, 0.95) 70%), url('images/01.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    filter: blur(8px);
+    transform: scale(1.05);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: var(--accent-gold);
+    display: block;
+    margin-bottom: 1.2rem;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.hero-desc {
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    color: #C0BD88;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    transition: var(--transition-base);
+}
+
+.btn-primary {
+    background: var(--accent-gold);
+    color: #1C1D1F;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: var(--accent-gold-hover);
+    color: #FFF;
+    box-shadow: 0 5px 20px rgba(197, 160, 89, 0.4);
+}
+
+/* 品牌理念 */
+.philosophy {
+    background: #F2EFE9;
+    border-bottom: 1px solid var(--border-color);
+    padding: 3.5rem 2rem;
+}
+
+.philosophy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    text-align: center;
+}
+
+.philosophy-item i {
+    font-size: 1.8rem;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.philosophy-item h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.philosophy-item p {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* 商品展示區 */
+.products-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-tag {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--accent-gold);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.section-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 1rem auto 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 2.5rem;
+}
+
+.product-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: var(--transition-base);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-soft);
+    border-color: var(--accent-gold);
+}
+
+.product-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #1C1D1F;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-base);
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.06);
+}
+
+.product-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(28, 29, 31, 0.8);
+    color: var(--accent-gold);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    letter-spacing: 1px;
+    backdrop-filter: blur(4px);
+}
+
+.product-info {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-subtitle {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--accent-gold);
+    margin-bottom: 0.3rem;
+}
+
+.product-name {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.product-concept-short {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 1.2rem;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.btn-detail {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: var(--transition-base);
+}
+
+.product-card:hover .btn-detail {
+    color: var(--text-primary);
+}
+
+/* 關於品牌 */
+.about-section {
+    background: #FAF8F5;
+    border-top: 1px solid var(--border-color);
+    padding: 6rem 2rem;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: var(--shadow-soft);
+}
+
+.about-text {
+    font-family: var(--font-sans);
+    color: var(--text-secondary);
+    margin-top: 1.2rem;
+    line-height: 1.8;
+}
+
+.about-features {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2.5rem;
+}
+
+.feat-num {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    display: block;
+}
+
+.feat-label {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* 頁尾 */
+.footer {
+    background: #1C1D1F;
+    color: #E8E5DF;
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-brand p {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: #A09E9B;
+    margin-top: 1rem;
+    max-width: 320px;
+}
+
+.footer-links h4, .footer-contact h4 {
+    font-size: 1rem;
+    color: var(--accent-gold);
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    color: #A09E9B;
+}
+
+.footer-links a:hover {
+    color: #FFF;
+}
+
+.footer-contact p {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: #A09E9B;
+    margin-bottom: 0.6rem;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #2D2E32;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: #777571;
+}
+
+/* 詳情彈窗 Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-base);
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    background: var(--bg-card);
+    width: 90%;
+    max-width: 950px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    z-index: 10;
+    transition: var(--transition-base);
+}
+
+.modal-close:hover {
+    color: var(--text-primary);
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.modal-img-wrap {
+    background: #1C1D1F;
+}
+
+.modal-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.modal-info {
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-id {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
+}
+
+.modal-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0.2rem;
+}
+
+.modal-subtitle {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.modal-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.8rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-section {
+    margin-bottom: 1.2rem;
+}
+
+.modal-section h4 {
+    font-size: 0.9rem;
+    color: var(--accent-gold);
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.modal-section p {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.modal-actions {
+    margin-top: auto;
+    padding-top: 1.5rem;
+}
+
+/* 購物車側欄 */
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    background: var(--bg-card);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+    z-index: 2100;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-base);
+}
+
+.cart-drawer.active {
+    right: 0;
+}
+
+.cart-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-items {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+.cart-empty {
+    text-align: center;
+    color: var(--text-secondary);
+    font-family: var(--font-sans);
+    margin-top: 3rem;
+}
+
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.cart-item-price {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin: 0.2rem 0;
+}
+
+.cart-qty-ctrl {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.4rem;
+}
+
+.cart-qty-ctrl button {
+    border: 1px solid var(--border-color);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.cart-footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-primary);
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.btn-block {
+    width: 100%;
+    text-align: center;
+}
+
+/* RWD 響應式佈局 */
+@media (max-width: 900px) {
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}

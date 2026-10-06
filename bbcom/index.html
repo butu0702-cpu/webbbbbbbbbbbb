@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>墨韻東方 | 新中式珠寶飾品</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome 圖示庫 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 引入外部 CSS 檔案 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar 導覽列 -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <span class="logo-mark">墨</span>
+                <span class="logo-text">墨韻東方 <span>MO YUN</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#hero" class="active">首頁</a>
+                <a href="#products">臻品系列</a>
+                <a href="#about">東方美學</a>
+                <a href="#craft">匠心工藝</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="icon-btn" id="cartBtn" title="購物車">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section 主視覺區 -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">NEW CHINESE JEWELRY COLLECTION</span>
+            <h1 class="hero-title">東方韻致 ‧ 靜水深流</h1>
+            <p class="hero-desc">以當代極簡幾何語彙，重塑傳統意境。將詩意、風骨與金石天然融入日常佩戴。</p>
+            <a href="#products" class="btn btn-primary">探索臻品系列</a>
+        </div>
+    </section>
+
+    <!-- Philosophy Banner 品牌理念 -->
+    <section class="philosophy">
+        <div class="philosophy-container">
+            <div class="philosophy-item">
+                <i class="fa-solid fa-brush"></i>
+                <h3>水墨意境</h3>
+                <p>提取國畫與園林建築線條，轉化為當代珠寶形體</p>
+            </div>
+            <div class="philosophy-item">
+                <i class="fa-solid fa-gem"></i>
+                <h3>天然金石</h3>
+                <p>嚴選墨翠、天然和田玉、老蜜蠟與巴洛克珍珠</p>
+            </div>
+            <div class="philosophy-item">
+                <i class="fa-solid fa-hands"></i>
+                <h3>匠心手造</h3>
+                <p>傳統琺瑯、微雕與錾刻工藝，演繹現代輕奢質感</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Showcase 商品展示區 -->
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <span class="section-tag">COLLECTION</span>
+            <h2 class="section-title">新中式飾品系列</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            <!-- 動態渲染 10 款商品卡片 -->
+        </div>
+    </section>
+
+    <!-- Brand Story / Craft 關於品牌 -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/05.jpg" alt="匠心工藝" id="aboutImg">
+            </div>
+            <div class="about-content">
+                <span class="section-tag">OUR CRAFT & SOUL</span>
+                <h2 class="section-title" style="text-align: left;">傳承與創新的東方美學</h2>
+                <p class="about-text">
+                    「墨韻東方」深信，傳統文化不應只是博物館中的陳列品，而應是融入現代人生活情感的溫潤陪伴。
+                </p>
+                <p class="about-text">
+                    我們打破古典翡翠、玉石與金屬飾品的沈重感，將「潑墨」、「冰裂」、「漏窗」、「盤扣」等符號進行幾何化拆解，結合現代微雕與高精度珠寶鑲嵌工藝，賦予每件飾品詩意與靈魂。
+                </p>
+                <div class="about-features">
+                    <div class="feat">
+                        <span class="feat-num">10+</span>
+                        <span class="feat-label">獨家設計概念</span>
+                    </div>
+                    <div class="feat">
+                        <span class="feat-num">100%</span>
+                        <span class="feat-label">天然材質嚴選</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer 頁尾 -->
+    <footer class="footer" id="craft">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="brand-logo" style="color:#fff;">
+                    <span class="logo-mark" style="background:#C5A059; color:#1C1D1F;">墨</span>
+                    <span class="logo-text" style="color:#fff;">墨韻東方 <span style="color:#A09E9B;">MO YUN</span></span>
+                </a>
+                <p>詮釋新中式輕奢珠寶，讓東方美學成為一種日常生活態度。</p>
+            </div>
+            <div class="footer-links">
+                <h4>快速連結</h4>
+                <ul>
+                    <li><a href="#hero">首頁</a></li>
+                    <li><a href="#products">臻品系列</a></li>
+                    <li><a href="#about">關於我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>聯絡與服務</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 台北市大安區東方美學大道 88 號</p>
+                <p><i class="fa-solid fa-envelope"></i> service@moyunjewelry.com</p>
+                <p><i class="fa-solid fa-phone"></i> +886 2 2345 6789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MO YUN Jewelry. All Rights Reserved. 墨韻東方 版權所有</p>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal 商品詳情彈窗 -->
+    <div class="modal" id="productModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <div class="modal-img-wrap">
+                    <img id="modalImg" src="" alt="商品圖片">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-id" id="modalId">NO.01</span>
+                    <h2 class="modal-title" id="modalTitle">商品名稱</h2>
+                    <p class="modal-subtitle" id="modalSubtitle">商品概念標題</p>
+                    <div class="modal-price" id="modalPrice">NT$ 0</div>
+                    
+                    <div class="modal-section">
+                        <h4><i class="fa-solid fa-feather-pointed"></i> 商品概念</h4>
+                        <p id="modalConcept"></p>
+                    </div>
+
+                    <div class="modal-section">
+                        <h4><i class="fa-solid fa-gem"></i> 設計細節</h4>
+                        <p id="modalDetail"></p>
+                    </div>
+
+                    <div class="modal-section">
+                        <h4><i class="fa-solid fa-sparkles"></i> 適合場合</h4>
+                        <p id="modalOccasion"></p>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" id="modalAddCart">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer 購物車側欄 -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> 您的購物車</h3>
+            <button class="cart-close" id="cartClose"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>小計</span>
+                <span id="cartTotal">NT$ 0</span>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="alert('感謝您的試訂！此為新中式展示網站原型。')">前往結帳</button>
+        </div>
+    </div>
+
+    <!-- Main JavaScript 互動邏輯 -->
+    <script>
+        const products = [
+            { id: "01", numStr: "01", name: "墨韻生香", subtitle: "天然墨翠與幾何純銀戒指", price: 4800, img: "images/01.jpg", concept: "以傳統國畫中的「潑墨」為靈感，打破傳統翡翠戒面圓潤包邊的沉重感。", detail: "選用幾何方形切割的天然墨翠（光下顯綠，暗處如墨），搭配俐落線條的 S925 純銀戒台。銀戒身局部做燻黑與刷線處理，營造出如水墨在宣紙上暈染開來的抽象意境。", occasion: "日常通勤、極簡風格穿搭、中性風穿搭。" },
+            { id: "02", numStr: "02", name: "游龍驚鴻", subtitle: "流蘇巴洛克珍珠耳掛", price: 6200, img: "images/02.jpg", concept: "汲取古典龍紋與漢服飄帶的靈動，將東方的流線美學與西方的異形珍珠相結合。", detail: "耳掛主體為 18K 包金材質，精雕出抽象的龍身曲線，順著耳廓延伸；耳垂處垂綴一顆形態獨一無二的異形巴洛克珍珠，下端連接著極細的金屬細鏈流蘇，走動間隨風擺動，搖曳生姿。", occasion: "晚宴、派對、新中式禮服穿搭。" },
+            { id: "03", numStr: "03", name: "青瓷冰裂", subtitle: "陶瓷與不規則金屬拼接項鍊", price: 3900, img: "images/03.jpg", concept: "將宋代汝窯的「冰裂紋」質感融入現代飾品，展現「歲月淬鍊之美」。", detail: "吊墜採用手工燒製的天青色微型陶瓷片，表面帶有自然開片冰裂紋；外圍以熔岩質感的金屬（啞光金色）不規則包裹，呈現出古物與現代藝術交融的衝突感。", occasion: "文青風格、素色棉麻服飾、秋冬毛衣點綴。" },
+            { id: "04", numStr: "04", name: "繩結寄思", subtitle: "紅繩純銀打結手鐲", price: 3200, img: "images/04.jpg", concept: "重塑傳統「紅繩月老」與「同心結」概念，甩開俗套，打造極簡現代的守護飾品。", detail: "手鐲主體為半硬質的極細純銀圓環，手鐲開口處由一根高密度微雕紅編繩貫穿，並在中央綁出俐落的抽象同心結。銀色與深紅色的強烈對比，既有東方祝福意涵，又極具現代幾何美感。", occasion: "情侶對飾、本命年佩戴、疊搭手錶或手鍊。" },
+            { id: "05", numStr: "05", name: "竹影清風", subtitle: "竹節造型鈦鋼發簪/鎖骨鍊（兩用款）", price: 2800, img: "images/05.jpg", concept: "取「竹」之高潔與堅韌，將傳統髮簪與現代鎖骨鍊結合，打造多功能變形飾品。", detail: "採用輕量化的竹節狀鈦鋼組件，表面做微啞光拉絲處理。作為髮簪時，可輕鬆挽起髮髻；將簪頭的隱形扣環拆下連上細鍊，又能瞬間變身為極具結構感的竹節鎖骨鍊。", occasion: "盤髮造型、襯衫領口點綴、多功能旅行穿搭。" },
+            { id: "06", numStr: "06", name: "浮生若夢", subtitle: "琺瑯點翠風蝴蝶胸針", price: 5400, img: "images/06.jpg", concept: "以現代溫和的琺瑯工藝替代傳統點翠，傳承古典工藝之美，同時展現可持續時尚。", detail: "蝴蝶翅膀採用半透明的青藍色漸層琺瑯，光線穿透時呈現寶石般的光澤；蝶身與觸角以極細的金絲勾勒，翅膀邊緣鑲嵌微型小珍珠。整體設計輕盈精巧，透出靈動優雅的古典氣韻。", occasion: "西裝外套領口、帆布包裝飾、針織衫胸前點綴。" },
+            { id: "07", numStr: "07", name: "歲月如環", subtitle: "老蜜蠟與冷淡風金屬雙圈耳環", price: 4500, img: "images/07.jpg", concept: "打破蜜蠟「老氣」的刻板印象，將溫潤的東方琥珀蜜蠟與俐落的金屬線條結合。", detail: "外圈為大號的啞光金色冷淡風金屬圓環，內圈則懸空一顆天然明黃色圓珠蜜蠟。穿戴時內外圈會隨著動作自然旋轉，營造出溫潤與冷冽並存的視覺張力。", occasion: "商務休閒穿搭、復古風穿搭、秋冬大衣搭配。" },
+            { id: "08", numStr: "08", name: "窗格寄月", subtitle: "和田玉透雕幾何吊墜", price: 5800, img: "images/08.jpg", concept: "靈感來自蘇州園林的「漏窗」與「借景」美學，將園林建築縮影於胸前。", detail: "選用質地細膩的白玉（或羊脂玉），切割成簡約的幾何方形，中間透雕出古典海棠花窗的簡化圖案。上方穿過一條純銀金色細鍊，玉石的溫潤與金屬的洗練完美融為一體。", occasion: "日常疊搭、新中式旗袍/茶服搭配。" },
+            { id: "09", numStr: "09", name: "盤扣心結", subtitle: "鏤空金屬盤扣造型戒指", price: 2900, img: "images/09.jpg", concept: "將傳統旗袍上的「手工盤扣」轉化為金屬雕塑，代表「扣住心意與美好」。", detail: "採用鏤空金屬鑄造工藝，將立體的花式盤扣圖案立體還原於戒面上。線條圓潤流暢，空隙間能透出皮膚顏色，既有傳統結構的複雜美，又不會顯得過於笨重。", occasion: "單戴作為視覺焦點、時尚指環疊搭。" },
+            { id: "10", numStr: "10", name: "柿柿如意", subtitle: "南紅瑪瑙微型吊墜手鍊", price: 3600, img: "images/10.jpg", concept: "取吉祥諧音「事事如意」，將傳統祈福寓意做微型化、精緻化的現代演繹。", detail: "選用一顆圓潤的小巧南紅瑪瑙作為「小柿子」，柿蒂處以 18K 金精細包裹，旁邊綴有一片微型的金葉子與一顆天然小珍珠。配上極細的金鎖骨鍊或手鍊，俏皮討喜又不失精緻感。", occasion: "日常百搭、節慶禮物、閨蜜同款飾品。" }
+        ];
+
+        let cart = [];
+        let currentModalProduct = null;
+
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = products.map(p => `
+                <div class="product-card" onclick="openModal('${p.id}')">
+                    <div class="product-img-wrap">
+                        <img src="${p.img}" alt="${p.name}" class="product-img" onerror="this.src='https://via.placeholder.com/600x600/232428/C5A059?text=${encodeURIComponent(p.name)}'">
+                        <span class="product-tag">NO.${p.numStr}</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-subtitle">${p.subtitle}</span>
+                        <h3 class="product-name">${p.name}</h3>
+                        <p class="product-concept-short">${p.concept}</p>
+                        <div class="product-bottom">
+                            <span class="product-price">NT$ ${p.price.toLocaleString()}</span>
+                            <button class="btn-detail" onclick="event.stopPropagation(); openModal('${p.id}')">
+                                詳情 <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openModal(id) {
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+            currentModalProduct = product;
+            document.getElementById('modalImg').src = product.img;
+            document.getElementById('modalId').innerText = `NO.${product.numStr}`;
+            document.getElementById('modalTitle').innerText = product.name;
+            document.getElementById('modalSubtitle').innerText = product.subtitle;
+            document.getElementById('modalPrice').innerText = `NT$ ${product.price.toLocaleString()}`;
+            document.getElementById('modalConcept').innerText = product.concept;
+            document.getElementById('modalDetail').innerText = product.detail;
+            document.getElementById('modalOccasion').innerText = product.occasion;
+            document.getElementById('productModal').classList.add('active');
+        }
+
+        function closeModal() { document.getElementById('productModal').classList.remove('active'); }
+        function toggleCart(show) { document.getElementById('cartDrawer').classList.toggle('active', show); }
+
+        function addToCart(product) {
+            const existing = cart.find(item => item.id === product.id);
+            if (existing) existing.qty += 1;
+            else cart.push({ ...product, qty: 1 });
+            updateCart();
+            toggleCart(true);
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const totalQty = cart.reduce((sum, i) => sum + i.qty, 0);
+            const totalPrice = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+
+            document.getElementById('cartCount').innerText = totalQty;
+            document.getElementById('cartTotal').innerText = `NT$ ${totalPrice.toLocaleString()}`;
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<div class="cart-empty"><i class="fa-solid fa-box-open" style="font-size:2rem; margin-bottom:0.5rem;"></i><br>購物車目前是空的</div>';
+                return;
+            }
+
+            cartItems.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <img src="${item.img}" alt="${item.name}">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">${item.name}</div>
+                        <div class="cart-item-price">NT$ ${item.price.toLocaleString()}</div>
+                        <div class="cart-qty-ctrl">
+                            <button onclick="changeQty('${item.id}', -1)">-</button>
+                            <span>${item.qty}</span>
+                            <button onclick="changeQty('${item.id}', 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) cart = cart.filter(i => i.id !== id);
+            updateCart();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            document.getElementById('modalClose').addEventListener('click', closeModal);
+            document.getElementById('modalOverlay').addEventListener('click', closeModal);
+            document.getElementById('modalAddCart').addEventListener('click', () => {
+                if (currentModalProduct) { addToCart(currentModalProduct); closeModal(); }
+            });
+            document.getElementById('cartBtn').addEventListener('click', () => toggleCart(true));
+            document.getElementById('cartClose').addEventListener('click', () => toggleCart(false));
+        });
+    </script>
+</body>
+</html>
