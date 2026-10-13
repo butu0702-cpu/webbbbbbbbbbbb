@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetShop | 質感生活選物商城</title>
+    <!-- 引入外部 CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 頂部導覽列 -->
+    <header class="navbar">
+        <div class="logo">✨ SweetShop 選物</div>
+        <div class="cart-container">
+            <span class="cart-icon">🛒</span>
+            <span>購物車</span>
+            <span id="cartCount" class="cart-badge">0</span>
+        </div>
+    </header>
+
+    <!-- 網站橫幅 -->
+    <section class="hero">
+        <h1>探索你的質感日常</h1>
+        <p>精選 5 款人氣生活好物，點擊加入購物車體驗驚喜愛心光波！</p>
+    </section>
+
+    <!-- 商品列表區 (至少 5 個商品) -->
+    <main class="container">
+        <h2 class="section-title">熱銷精選商品</h2>
+        
+        <div class="product-grid">
+            
+            <!-- 商品 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop" alt="無線藍牙耳機">
+                <div class="product-info">
+                    <h3>極簡無線降噪藍牙耳機</h3>
+                    <p class="price">NT$ 1,280</p>
+                    <button class="btn-cart" onclick="addToCart(event)">加入購物車</button>
+                </div>
+            </div>
+
+            <!-- 商品 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1545127598-f112ba077364?w=500&auto=format&fit=crop" alt="復古木質音響">
+                <div class="product-info">
+                    <h3>復古文青木質藍牙音響</h3>
+                    <p class="price">NT$ 890</p>
+                    <button class="btn-cart" onclick="addToCart(event)">加入購物車</button>
+                </div>
+            </div>
+
+            <!-- 商品 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&auto=format&fit=crop" alt="磁吸護眼檯燈">
+                <div class="product-info">
+                    <h3>磁吸式無段調光護眼檯燈</h3>
+                    <p class="price">NT$ 650</p>
+                    <button class="btn-cart" onclick="addToCart(event)">加入購物車</button>
+                </div>
+            </div>
+
+            <!-- 商品 4 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&auto=format&fit=crop" alt="質感保溫瓶">
+                <div class="product-info">
+                    <h3>馬卡龍大容量不鏽鋼保溫瓶</h3>
+                    <p class="price">NT$ 490</p>
+                    <button class="btn-cart" onclick="addToCart(event)">加入購物車</button>
+                </div>
+            </div>
+
+            <!-- 商品 5 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=500&auto=format&fit=crop" alt="懶人折疊桌">
+                <div class="product-info">
+                    <h3>多功能多段調節懶人床邊桌</h3>
+                    <p class="price">NT$ 750</p>
+                    <button class="btn-cart" onclick="addToCart(event)">加入購物車</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer>
+        <p>&copy; 2026 SweetShop. All rights reserved.</p>
+    </footer>
+
+    <!-- 引入外部 JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
